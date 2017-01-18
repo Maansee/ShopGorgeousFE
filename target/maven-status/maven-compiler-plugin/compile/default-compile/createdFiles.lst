@@ -1,0 +1,4 @@
+com\niit\shopgorgeous\controller\HomeController.class
+com\niit\shopgorgeous\controller\CategoryController.class
+com\niit\shopgorgeous\controller\SupplierController.class
+com\niit\shopgorgeous\controller\UserController.class
