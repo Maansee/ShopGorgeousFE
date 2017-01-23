@@ -28,18 +28,18 @@ public class UserController {
 		
 		
 
-	
-		@RequestMapping(value = "/register", method = RequestMethod.POST)
-		public ModelAndView register() {
-			System.out.println("in UserController");
-			User u = new User();
-		
-			ModelAndView model = new ModelAndView("register");
-			model.addObject("Userdata",u);
-			return model;	
-			}
-	
-		
+//	
+//		@RequestMapping(value = "/register", method = RequestMethod.POST)
+//		public ModelAndView register() {
+//			System.out.println("in UserController");
+//			User u = new User();
+//		
+//			ModelAndView model = new ModelAndView("register");
+//			model.addObject("Userdata",u);
+//			return model;	
+//			}
+//	
+//		
 		
 		@RequestMapping(value = "/saveuser", method = RequestMethod.POST)
 		public String adduser(@Valid @ModelAttribute("Userdata")User reg,BindingResult result)

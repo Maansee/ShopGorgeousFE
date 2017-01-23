@@ -20,7 +20,7 @@ import com.niit.shopgorgeous.model.Supplier;
 
 
 @Controller
-public class SupplierController {
+public class SupplierController  {
 
 	public static Logger log = LoggerFactory.getLogger(SupplierController.class);
 
@@ -29,33 +29,26 @@ public class SupplierController {
 	
 	@Autowired
 	Supplier supplier;
-
-
 	
-		@RequestMapping(value = "/supplier", method = RequestMethod.POST)
-		public ModelAndView category() {
-			System.out.println("in SupplierController");
-			Supplier s = new Supplier();
-		
-			ModelAndView model = new ModelAndView("supplier");
-			model.addObject("Supplierdata",s);
-			return model;	
-			}
-	
-		
+	@RequestMapping("/supplier")
+	public ModelAndView supplier() {
+//		ModelAndView model = new ModelAndView("supplier");
+		System.out.println("in SupplierController");
+		Supplier s = new Supplier();
+		ModelAndView model = new ModelAndView("supplier");
+		model.addObject("Supplierdata",s);
+		return model;
+	}
+
 		
 		@RequestMapping(value = "/addSupplier", method = RequestMethod.POST)
 		public String addcategory(@Valid @ModelAttribute("Supplierdata")Supplier reg,BindingResult result)
 		{
 			supplierDAO.save(reg);
-			return "supplier";
+			return "redirect:/supplierlist";
 		}
-//
-//		@RequestMapping(value = "/supplierlist")
-//		public String ViewSupplier(Model model) {
-//			model.addAttribute("supplierList", this.supplierDAO.list());
-//			return "supplierlist";
-//		}
+
+		
 		
 		@RequestMapping(value = "/supplierlist")
 		public ModelAndView supplierList(){
@@ -70,7 +63,7 @@ public class SupplierController {
 		@RequestMapping(value = "/removesupplier/{Supplier_id}")
 		public String DeleteSupplier(@PathVariable("Supplier_id") int id) {
 			this.supplierDAO.delete(id);
-			return "supplierlist";
+			return "redirect:/supplierlist";
 
 		}
 		
