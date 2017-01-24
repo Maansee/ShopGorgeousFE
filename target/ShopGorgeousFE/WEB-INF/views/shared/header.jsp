@@ -149,19 +149,31 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									<div class="row">
 										<div class="col-sm-3">
 											<ul class="multi-column-dropdown">
-												<li><a href="admin"><i class="fa fa-angle-right" aria-hidden="true"></i>Edit Products</a></li>
-												<li><a href="admin"><i class="fa fa-angle-right" aria-hidden="true"></i>Edit Suppliers</a></li>
-												<li><a href="admin"><i class="fa fa-angle-right" aria-hidden="true"></i>Edit Category</a></li>
-												<li><a href="admin"><i class="fa fa-angle-right" aria-hidden="true"></i>Manage</a></li>
+												<li><a href="newproduct"><i class="fa fa-angle-right" aria-hidden="true"></i>Add Products</a></li>
+												<li><a href="supplier"><i class="fa fa-angle-right" aria-hidden="true"></i>Add Suppliers</a></li>
+												<li><a href="category"><i class="fa fa-angle-right" aria-hidden="true"></i>Add Category</a></li>
+												
 										
 											</ul>
 											
 										</div>
+										<div class="col-sm-3">
+											
+											<ul class="multi-column-dropdown">
+												<li><a href="productlist"><i class="fa fa-angle-right" aria-hidden="true"></i>Show Products</a></li>
+												<li><a href="supplierlist"><i class="fa fa-angle-right" aria-hidden="true"></i>Show Suppliers </a></li>
+												<li><a href="categorylist"><i class="fa fa-angle-right" aria-hidden="true"></i>Show Categories </a></li>
+												
 										
+											</ul>
+										</div>
 										<div class="clearfix"></div>
+										
 									</div>	
 								</ul>
 							</li>
+							
+
 							
 							
 							<li><a href="contact" class="hyper"><span>Contact Us</span></a></li>

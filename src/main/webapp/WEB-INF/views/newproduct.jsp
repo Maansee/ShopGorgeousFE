@@ -26,9 +26,9 @@
 			<div class="main-agileits">
 				<div class="form-w3agile form1">
 					<h3>Add a new product</h3>
+<%-- 					<form action="#" method="post">  --%>
 					<c:url var="addaction" value="/newproduct/add"></c:url>
-					<form:form action="addproduct" commandName="Productdata"
-						enctype="multipart/form-data">
+					<form:form action="addproduct" commandName="Productdata" enctype="multipart/form-data">
 
 						<%-- 						<form:label path="Product_id">Product ID</form:label> --%>
 						<!-- 						<div class="key"> -->
@@ -80,11 +80,8 @@
 
 						<form:label path="image">Product Image</form:label>
 						<div class="key">
-
-
-
-							<form:input class="form-control" type="file" path="image" />
-							<div class="clearfix"></div>
+						<form:input class="form-control" type="file" path="image" />
+						<div class="clearfix"></div>
 						</div>
 
 						<input type="submit" value="Submit">
@@ -93,7 +90,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	
 
 <%@include file="shared/footer.jsp"%>
 </body>

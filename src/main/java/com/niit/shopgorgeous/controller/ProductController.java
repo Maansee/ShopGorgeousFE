@@ -49,17 +49,18 @@ public class ProductController {
 	}
 	
 	@RequestMapping(value = "/addproduct", method = RequestMethod.POST)
-	public String addprod(@Valid @ModelAttribute("Productdata") Product reg, HttpServletRequest request,BindingResult result) 
+	public String addproduct(@Valid @ModelAttribute("Productdata") Product reg, HttpServletRequest request,BindingResult result) 
 
-	{System.out.println("add product");
-
-		if (result.hasErrors())
-			return "productForm";
+	{
+		System.out.println("add product");
+//
+//		if (result.hasErrors())
+//			return "productForm";
 
 		MultipartFile image = reg.getImage();
 		if (image != null && !image.isEmpty()) {
 			Path path = Paths
-					.get("F:\\Eclipse Workspace\\MyProject\\ShopGorgeousFE\\src\\main\\webapp\\resources\\images"
+					.get("F:\\Eclipse Workspace\\MyProject\\ShopGorgeousFE\\src\\main\\webapp\\resources\\images\\"
 							+ reg.getProductname() + ".jpg");
 			try {
 				image.transferTo(new File(path.toString()));
@@ -73,16 +74,25 @@ public class ProductController {
 		}
 
 		productDAO.save(reg);
-		return ("redirect:/productlist");
+		return "redirect:/productlist";
 
 	}
 	
-	@RequestMapping(value = "/productlist")
-	public String ViewProducts(Model model) {
-		model.addAttribute("productList", this.productDAO.list());
-		return "/productlist";
-	}
+//	@RequestMapping(value = "/productlist")
+//	public String ViewProducts(Model model) {
+//		model.addAttribute("productList", this.productDAO.list());
+//		return "/productlist";
+//	}
 
+
+	@RequestMapping(value = "/productlist")
+	public ModelAndView productList(){
+		ModelAndView mv = new ModelAndView("/productlist");
+		System.out.println("To display product list");
+		mv.addObject("product", product);
+		mv.addObject("productList", this.productDAO.list());
+		return mv;
+	}	
 	@RequestMapping(value = "/removeproduct/{productid}")
 	public String DeleteProducts(@PathVariable("productid") int id) {
 		this.productDAO.delete(id);
@@ -94,6 +104,8 @@ public class ProductController {
 	public String editProducts(@PathVariable("productid") int id, Model model) {
 		model.addAttribute("Product", this.productDAO.get(id));
 		model.addAttribute("productList", this.productDAO.list());
+		model.addAttribute("Catgname", productDAO.listcatgname());
+		model.addAttribute("Suplname", productDAO.listsuplname());
 		return "editproduct";
 	}
 

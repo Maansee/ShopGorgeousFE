@@ -14,7 +14,7 @@
 
 <%@ include file="shared/header.jsp" %>
 
-<!-- <body ng-app="prodapp" ng-controller="myprodController" -->
+<%-- <!-- <body ng-app="prodapp" ng-controller="myprodController" -->
 <!-- 	ng-init="listProduct()"> -->
 <!-- 	<div> -->
 <!-- 		<br> -->
@@ -32,9 +32,9 @@
 						<div class="table-responsive">
 							<table class="tg">
 								<tr>
-<%-- 									<security:authorize access="hasRole('ROLE_ADMIN')"> --%>
+									<security:authorize access="hasRole('ROLE_ADMIN')">
 										<th width="80">Product ID</th>
-<%-- 									</security:authorize> --%>
+									</security:authorize>
 									<th width="160">Product Name</th>
 									<th width="120">Product Description</th>
 									<th width="120">Category Name</th>
@@ -49,17 +49,17 @@
 										<th width="60">Delete</th>
 									</security:authorize>
 								</tr>
-								<%-- 						<c:forEach items="${productList}" var="p"> --%>
-								<tr ng-repeat="p in products | filter:searchConditionprod">
+														<c:forEach items="${productList}" var="p">
+<!-- 								<tr ng-repeat="p in products | filter:searchConditionprod"> -->
 									<security:authorize access="hasRole('ROLE_ADMIN')">
 										<td>{{p.productid}}</td>
 									</security:authorize>
 									<td><a href="<c:url value='/infoprod/{{p.productid}}'/>">
 											{{p.productname}}</td>
 									<td>{{p.productdescription}}</td>
-									<td>{{p.categoryname}}</td>
+									<td>{{p.category_name}}</td>
 									<security:authorize access="hasRole('ROLE_ADMIN')">
-										<td>{{p.suppliername}}</td>
+										<td>{{p.supplier_name}}</td>
 									</security:authorize>
 									<td>{{p.productprice}}</td>
 									<c:url value="/resources/images/{{p.productname}}.jpg"
@@ -73,13 +73,13 @@
 
 
 
-<%-- 									<security:authorize access="hasRole('ROLE_ADMIN')"> --%>
+									<security:authorize access="hasRole('ROLE_ADMIN')">
 										<td><a href="<c:url value='/editproduct/{{p.productid}}' />">Edit</a></td>
 										<td><a
 											href="<c:url value='/removeproduct/{{p.productid}}' />">Delete</a></td>
-<%-- 									</security:authorize> --%>
+									</security:authorize>
 								</tr>
-								<%-- 							</c:forEach> --%>
+								</c:forEach>
 							</table>
 
 						</div>
@@ -87,9 +87,31 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> --%>
+	<h3>Product List</h3>
 
-	<%@include file="shared/footer.jsp"%>
+<table class="tg" border=1 align="center">
+	<tr>
+		<th width="80">Product ID</th>
+		<th width="120">Product Name</th>
+		<th width="120">Product Description</th>
+		<th width="60">Edit</th>
+		<th width="60">Delete</th>
+	</tr>
+	<c:forEach items="${productList}" var="p">
+		<tr>
+
+			<td><c:out value="${p.productid}" /></td>
+			<td><c:out value="${p.productname}" /></td>
+			<td><c:out value="${p.productdescription}" /></td>
+			<td><a href="<c:url value='/editproduct/${p.productid}' />">Edit</a></td>
+			<td><a
+				href="<c:url value='/removeproduct/${p.productid}' />">Delete</a></td>
+		</tr>
+	</c:forEach>
+</table>
+
+<%@include file="shared/footer.jsp"%>
 <%-- 	<script src="${js}/app.js"></script> --%>
 </body>
 </html>

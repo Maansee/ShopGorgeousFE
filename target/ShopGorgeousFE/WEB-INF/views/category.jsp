@@ -52,6 +52,28 @@
 			</div>
 		</div>
 
+<h3>Category List</h3>
+
+<table class="tg" border=1 align="center">
+	<tr>
+		<th width="80">Category ID</th>
+		<th width="120">Category Name</th>
+		<th width="120">Category Description</th>
+		<th width="60">Edit</th>
+		<th width="60">Delete</th>
+	</tr>
+	<c:forEach items="${categoryList}" var="cat">
+		<tr>
+
+			<td><c:out value="${cat.category_id}" /></td>
+			<td><c:out value="${cat.category_name}" /></td>
+			<td><c:out value="${cat.category_description}" /></td>
+			<td><a href="<c:url value='/editcategory/${cat.category_id}' />">Edit</a></td>
+			<td><a
+				href="<c:url value='/removecategory/${cat.category_id}' />">Delete</a></td>
+		</tr>
+	</c:forEach>
+</table>
 <!-- //footer-->
 <!-- smooth scrolling -->
 	<script type="text/javascript">
