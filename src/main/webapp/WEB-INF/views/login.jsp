@@ -28,22 +28,32 @@
 		<div class="main-agileits">
 				<div class="form-w3agile">
 					<h3>Login</h3>
-					<form action="#" method="post">
+					<c:if test="${not empty error}">
+						<div class=error style="color: #ff0000">${error}</div>
+					</c:if>
+					<c:if test="${not empty logout}">
+					<div class=logout style="color:#ff0000"> ${logout} </div>
+					</c:if>
+					<br>
+					<form action="<c:url value="j_spring_security-check"/>" method="post">
 						<div class="key">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-							<input  type="text" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<input  type="text" value="Name" name="j_User_id" path="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
 							<div class="clearfix"></div>
 						</div>
 						<div class="key">
 							<i class="fa fa-lock" aria-hidden="true"></i>
-							<input  type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+							<input  type="password" value="Password" name="j_User_password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
 							<div class="clearfix"></div>
 						</div>
-						<input type="submit" value="Login">
+						
+						<input type="submit" value="Login"><input type="hidden" name="${csrf.parametername}" value="${_csrf.token}" />
+						
+						
 					</form>
 				</div>
 				<div class="forg">
-					<a href="#" class="forg-left">Forgot Password</a>
+					<a href="<c:url value='/ContactUs'/>" class="forg-left">Forgot Password</a>
 					<a href="register" class="forg-right">Register</a>
 				<div class="clearfix"></div>
 				</div>

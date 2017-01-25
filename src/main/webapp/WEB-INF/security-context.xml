@@ -1,0 +1,138 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.1.xsd">
+
+
+
+	<!-- <beans:beans xmlns="http://www.springframework.org/schema/security" -->
+	<!-- xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
+	<!-- xmlns:security="http://www.springframework.org/schema/security" -->
+	<!-- xsi:schemaLocation="http://www.springframework.org/schema/beans -->
+	<!-- http://www.springframework.org/schema/beans/spring-beans-4.1.xsd -->
+	<!-- http://www.springframework.org/schema/security -->
+	<!-- http://www.springframework.org/schema/security/spring-security-4.1.xsd"> -->
+
+
+
+
+	<security:http auto-config="true" use-expressions="true">
+
+		<!-- <security:intercept-url pattern="/index/**" -->
+		<!-- access="permitAll" /> -->
+
+		<!-- <security:intercept-url pattern="/Home/**" -->
+		<!-- access="permitAll" /> -->
+
+		<!-- <security:intercept-url pattern="/Register" -->
+		<!-- access="permitAll" /> -->
+
+		<!-- <security:intercept-url pattern="/AboutUs" -->
+		<!-- access="permitAll" /> -->
+
+		<!-- <security:intercept-url pattern="/ContactUs" -->
+		<!-- access="permitAll" /> -->
+
+		<!-- <security:intercept-url pattern="/Login" -->
+		<!-- access="permitAll" /> -->
+
+		<!-- <security:intercept-url pattern="/listproduct/**" -->
+		<!-- access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" /> -->
+
+		<!-- Products security -->
+		<security:intercept-url pattern="/removeproduct/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/editproduct/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/newproduct/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/addproduct/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+	
+		<security:intercept-url pattern="/productlist/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<!-- Supplier Security -->
+		<security:intercept-url pattern="/supplier/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/addSupplier/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/supplierlist/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/removesupplier/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/editsupplier/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+
+		<!-- Category Security -->
+		<security:intercept-url pattern="/category/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/addCategory/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/categorylist/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/removecategory/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/editcategory/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+
+		<!-- User Security -->
+		<security:intercept-url pattern="/listuser/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/removeuser/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/edituser/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
+
+		<security:intercept-url pattern="/order/{cartId}/**"
+			access="hasAnyRole('ROLE_USER')" />
+
+		<security:intercept-url pattern="/checkout**"
+			access="hasAnyRole('ROLE_USER')" />
+
+
+
+
+		<security:intercept-url pattern="/cart/**"
+			access="hasAnyRole('ROLE_USER')" />
+
+
+
+
+
+		<security:form-login authentication-failure-url="/loginerror"
+			login-processing-url="/j_spring_security-check" password-parameter="j_User_password"
+			username-parameter="j_User_id" default-target-url="/" login-page="/login" />
+		<security:csrf disabled="true" />
+
+		<!-- <security:form-login login-page="/Login" -->
+		<!-- default-target-url="/" authentication-failure-url="/login?error" /> -->
+		<security:logout logout-success-url="/Logout" />
+	</security:http>
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<security:jdbc-user-service
+				data-source-ref="dataSource"
+				authorities-by-username-query="Select name, role from User WHERE name = ?"
+				users-by-username-query="Select name, password,'true' from User WHERE name = ?" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+</beans:beans>

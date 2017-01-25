@@ -1,21 +1,21 @@
 package com.niit.shopgorgeous.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import com.niit.shopgorgeous.dao.ProductDAO;
-import com.niit.shopgorgeous.model.Category;
-import com.niit.shopgorgeous.model.Product;
-import com.niit.shopgorgeous.model.Supplier;
-import com.niit.shopgorgeous.model.User;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
-	
-//	@Autowired
-//	ProductDAO productDAO;
+
 	
 	@RequestMapping("/")
 	public ModelAndView homepage() {
@@ -35,29 +35,27 @@ public class HomeController {
 		ModelAndView model = new ModelAndView("login");
 		return model;
 	}
-
-	@RequestMapping("/register")
-	public ModelAndView register() {
-//		ModelAndView model = new ModelAndView("register");
-		System.out.println("in UserController");
-		User u = new User();
 	
-		ModelAndView model = new ModelAndView("register");
-		model.addObject("Userdata",u);
-		return model;	
-	
+	@RequestMapping("/loginerror")
+	public String LoginError(@RequestParam(value = "error", required = false) String error, Model model) {
+		model.addAttribute("error", "Typos are expected! Pls try again.");
+		return "login";
 	}
 
-	
-//	@RequestMapping(value = "/category")
-//	public ModelAndView category() {
-//		System.out.println("in CategoryController");
-//		Category c = new Category();
-//	
-//		ModelAndView model = new ModelAndView("category");
-//		model.addObject("Categorydata",c);
-//		return model;	
-//		}
+	@RequestMapping(value = "/Logout", method = RequestMethod.GET)
+	public String logoutPage(HttpServletRequest request, HttpServletResponse response,
+			@RequestParam(value = "logout", required = false) String logout, Model model) {
+		System.out.println("Logout1");
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		if (auth != null) {
+			System.out.println("Logout2");
+			new SecurityContextLogoutHandler().logout(request, response, auth);
+		}System.out.println("Logout3");
+//		model.addAttribute("logout", "Have a great time! Thank you for visiting us.");
+		return "login";
+	}
+
+
 	
 	@RequestMapping("/about")
 	public ModelAndView about() {
@@ -77,25 +75,7 @@ public class HomeController {
 		return model;
 	}
 
-//	@RequestMapping("/supplier")
-//	public ModelAndView supplier() {
-////		ModelAndView model = new ModelAndView("supplier");
-//		System.out.println("in SupplierController");
-//		Supplier s = new Supplier();
-//		ModelAndView model = new ModelAndView("supplier");
-//		model.addObject("Supplierdata",s);
-//		return model;
-//	}
-	
-//	@RequestMapping("/newproduct")
-//	public ModelAndView newproduct() {
-//		Product p = new Product();
-//		ModelAndView model = new ModelAndView("newproduct");
-//		model.addObject("Productdata", p);
-////		model.addObject("Catgname", productDAO.listcatgname());
-////		model.addObject("Suplname", productDAO.listsuplname());
-//		return model;
-//	}
+
 
 	@RequestMapping("faqs")
 	public ModelAndView faqs() {

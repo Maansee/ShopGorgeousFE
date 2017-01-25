@@ -92,9 +92,12 @@
 
 <table class="tg" border=1 align="center">
 	<tr>
+	
 		<th width="80">Product ID</th>
 		<th width="120">Product Name</th>
 		<th width="120">Product Description</th>
+		<th width="120">Product Image</th>
+		
 		<th width="60">Edit</th>
 		<th width="60">Delete</th>
 	</tr>
@@ -104,9 +107,13 @@
 			<td><c:out value="${p.productid}" /></td>
 			<td><c:out value="${p.productname}" /></td>
 			<td><c:out value="${p.productdescription}" /></td>
+			
+			<c:url value="/resources/images/${p.productname}.jpg" var="imgg" />
+
+			<td> <img src="${imgg}" alt="prodimage" height="80" width="80" /></td>
+			
 			<td><a href="<c:url value='/editproduct/${p.productid}' />">Edit</a></td>
-			<td><a
-				href="<c:url value='/removeproduct/${p.productid}' />">Delete</a></td>
+			<td><a href="<c:url value='/removeproduct/${p.productid}' />">Delete</a></td>
 		</tr>
 	</c:forEach>
 </table>

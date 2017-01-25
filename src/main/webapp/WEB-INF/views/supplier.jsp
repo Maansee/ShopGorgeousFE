@@ -52,31 +52,31 @@
 			</div>
 		</div>
 		
-<!-- Table -->
+<!-- <!-- Table --> -->
 
-<h3>Supplier List</h3>
+<!-- <h3>Supplier List</h3> -->
 
 
-<table class="tg" border=1 align="center">
-	<tr>
-		<th width="80">Supplier ID</th>
-		<th width="120">Supplier Name</th>
-		<th width="120">Supplier Address</th>
-		<th width="60">Edit</th>
-		<th width="60">Delete</th>
-	</tr>
-	<c:forEach items="${supplierList}" var="sup">
-		<tr>
+<!-- <table class="tg" border=1 align="center"> -->
+<!-- 	<tr> -->
+<!-- 		<th width="80">Supplier ID</th> -->
+<!-- 		<th width="120">Supplier Name</th> -->
+<!-- 		<th width="120">Supplier Address</th> -->
+<!-- 		<th width="60">Edit</th> -->
+<!-- 		<th width="60">Delete</th> -->
+<!-- 	</tr> -->
+<%-- 	<c:forEach items="${supplierList}" var="sup"> --%>
+<!-- 		<tr> -->
 
-			<td><c:out value="${sup.supplier_id}" /></td>
-			<td><c:out value="${sup.supplier_name}" /></td>
-			<td><c:out value="${sup.supplier_address}" /></td>
-			<td><a href="<c:url value='/editsupplier/${sup.supplier_id}' />">Edit</a></td>
-			<td><a
-				href="<c:url value='/removesupplier/${sup.supplier_id}' />">Delete</a></td>
-		</tr>
-	</c:forEach>
-</table>
+<%-- 			<td><c:out value="${sup.supplier_id}" /></td> --%>
+<%-- 			<td><c:out value="${sup.supplier_name}" /></td> --%>
+<%-- 			<td><c:out value="${sup.supplier_address}" /></td> --%>
+<%-- 			<td><a href="<c:url value='/editsupplier/${sup.supplier_id}' />">Edit</a></td> --%>
+<!-- 			<td><a -->
+<%-- 				href="<c:url value='/removesupplier/${sup.supplier_id}' />">Delete</a></td> --%>
+<!-- 		</tr> -->
+<%-- 	</c:forEach> --%>
+<!-- </table> -->
 
 <!-- //footer-->
 <!-- smooth scrolling -->

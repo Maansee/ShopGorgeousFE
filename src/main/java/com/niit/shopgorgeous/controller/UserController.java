@@ -38,8 +38,19 @@ public class UserController {
 //			model.addObject("Userdata",u);
 //			return model;	
 //			}
-//	
-//		
+
+	
+		@RequestMapping("/register")
+		public ModelAndView register() {
+	//		ModelAndView model = new ModelAndView("register");
+			System.out.println("in UserController");
+			User u = new User();
+		
+			ModelAndView model = new ModelAndView("register");
+			model.addObject("Userdata",u);
+			return model;	
+		
+		}
 		
 		@RequestMapping(value = "/saveuser", method = RequestMethod.POST)
 		public String adduser(@Valid @ModelAttribute("Userdata")User reg,BindingResult result)
@@ -48,4 +59,6 @@ public class UserController {
 			return "login";
 		}
 
-	}
+}
+
+

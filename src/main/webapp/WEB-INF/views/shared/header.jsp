@@ -83,11 +83,28 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="head-t">
 				<ul class="card">
 					<li><a href="wishlist" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
-					<li><a href="login" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
-					<li><a href="register" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
+<!-- 					<li><a href="login" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li> -->
+<!-- when user logged in -->
+						<c:if test="${pageContext.request.userPrincipal.name != null }">
+
+							<li><a>Welcome:
+									${pageContext.request.userPrincipal.name}</a></li>
+							<li><a href="<c:url value='/Logout'/>">Logout</a></li>
+
+						</c:if>
+
+
+						<!-- when user not logged in -->
+						<c:if test="${pageContext.request.userPrincipal.name == null }">
+							<li><a href="<c:url value='/login'/>"><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
+							<li><a href="<c:url value='/register'/>"><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
+						</c:if>
+<!-- 					<li><a href="register" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li> -->
 					<li><a href="shipping" ><i class="fa fa-ship" aria-hidden="true"></i>Shipping</a></li>
 				</ul>	
 			</div>
+			
+			
 			
 			<div class="header-ri">
 				<ul class="social-top">
