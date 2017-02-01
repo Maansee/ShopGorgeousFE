@@ -24,7 +24,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.shopgorgeous.dao.ProductDAO;
-import com.niit.shopgorgeous.dao.SupplierDAO;
+
 import com.niit.shopgorgeous.model.Product;
 
 @Controller
@@ -109,23 +109,23 @@ public class ProductController {
 		return "editproduct";
 	}
 
-//	@RequestMapping(value = "/listproductsjson")
-//	public @ResponseBody List<Product> listProdInJSON() {
-//		return productDAO.list();
-//	}
-
-	// @RequestMapping("/infoprod/{productid}")
-	// public ModelAndView trial() {
-	// ModelAndView model = new ModelAndView("singleProduct");
-	// return model;
-	// }
-
-//	@RequestMapping("/infoprod/{productid}")
-//	public ModelAndView getRecord(@PathVariable("productid") int id, Model model) {
-//		Product productObject = productDAO.get(id);
-//		// System.out.println("view:"+movieObject.getMoviename());
-//		return new ModelAndView("singleProduct", "productObject", productObject);
-//	}
+	@RequestMapping(value = "/listproductsjson")
+	public @ResponseBody List<Product> listProdInJSON() {
+		return productDAO.list();
+	}
+//
+//	 @RequestMapping("/infoprod/{productid}")
+//	 public ModelAndView trial() {
+//	 ModelAndView model = new ModelAndView("singleProduct");
+//	 return model;
+//	 }
+//
+	@RequestMapping("/infoprod/{productid}")
+	public ModelAndView getRecord(@PathVariable("productid") int id, Model model) {
+		Product productObject = productDAO.get(id);
+		
+		return new ModelAndView("singleProduct", "productObject", productObject);
+	}
 }
 	
 

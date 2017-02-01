@@ -52,54 +52,30 @@
 			</div>
 		</div>
 		
-<!-- <!-- Table --> -->
 
-<!-- <h3>Supplier List</h3> -->
-
-
-<!-- <table class="tg" border=1 align="center"> -->
-<!-- 	<tr> -->
-<!-- 		<th width="80">Supplier ID</th> -->
-<!-- 		<th width="120">Supplier Name</th> -->
-<!-- 		<th width="120">Supplier Address</th> -->
-<!-- 		<th width="60">Edit</th> -->
-<!-- 		<th width="60">Delete</th> -->
-<!-- 	</tr> -->
-<%-- 	<c:forEach items="${supplierList}" var="sup"> --%>
-<!-- 		<tr> -->
-
-<%-- 			<td><c:out value="${sup.supplier_id}" /></td> --%>
-<%-- 			<td><c:out value="${sup.supplier_name}" /></td> --%>
-<%-- 			<td><c:out value="${sup.supplier_address}" /></td> --%>
-<%-- 			<td><a href="<c:url value='/editsupplier/${sup.supplier_id}' />">Edit</a></td> --%>
-<!-- 			<td><a -->
-<%-- 				href="<c:url value='/removesupplier/${sup.supplier_id}' />">Delete</a></td> --%>
-<!-- 		</tr> -->
-<%-- 	</c:forEach> --%>
-<!-- </table> -->
 
 <!-- //footer-->
-<!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
+<!-- <!-- smooth scrolling --> 
+<!-- <script type="text/javascript"> 
+$(document).ready(function() {
+
 			var defaults = {
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
 			easingType: 'linear' 
 			};
-		*/								
+							
 		$().UItoTop({ easingType: 'easeOutQuart' });
 		});
-	</script>
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</script>  -->
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- //smooth scrolling -->
-<!-- for bootstrap working -->
-		<script src="${js}/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-<script type='text/javascript' src="${js}/jquery.mycart.js"></script>
-  <script type="text/javascript">
+<!-- for bootstrap working --> 
+<script src="${js}/bootstrap.js"></script>
+<!-- //for bootstrap working --> 
+<%-- <script type='text/javascript' src="${js}/jquery.mycart.js"></script> 
+ <script type="text/javascript"> 
   $(function () {
 
     var goToCartIcon = function($addTocartBtn){
@@ -137,7 +113,7 @@
     });
 
   });
-  </script>
+</script>  --%>
 <%@ include file="shared/footer.jsp" %>
 </body>
 </html>

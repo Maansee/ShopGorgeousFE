@@ -33,7 +33,7 @@
 					<form:form action="saveuser" commandName="Userdata">
 						<div class="key">
 							<i class="fa fa-user" aria-hidden="true"></i>
-							<input  type="text" value="Name" name="Name" path="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+							<input  type="text" value="username" name="username" path="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
 <%-- 							<form:input type="text" path="name" /> --%>
 							<div class="clearfix"></div>
 						</div>
@@ -55,36 +55,168 @@
 <%-- 							<form:input type="text" path="mobile" /> --%>
 							<div class="clearfix"></div>
 						</div>
-						<input type="submit" value="Submit">
-					</form:form>
+<!-- 						<input type="submit" value="Submit"> -->
+					
 				</div>
 				
 			</div>
 		</div>
+<!-- 	<br> -->
+<!--billing address -->
 
+						<div class="login">
+					<div class="main-agileits">
+					<div class="form-w3agile form1">
+						<h3>Billing Address</h3>
+						
+						<form:label path="billingAddress.flatno">Flat No</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
+							<form:input type="text" path="billingAddress.flatno" />
+							<div class="clearfix"></div>
+						</div>
+						<form:label path="billingAddress.buildingname">Building Name</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-bookmark" aria-hidden="true"></i>
+							<form:input path="billingAddress.buildingname" />
+							<div class="clearfix"></div>
+						</div>
+
+						<form:label path="billingAddress.localityname">Locality Name</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-road" aria-hidden="true"></i>
+							<form:input path="billingAddress.localityname" />
+							<div class="clearfix"></div>
+						</div>
+
+						<form:label path="billingAddress.landmark">Landmark</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-picture" aria-hidden="true"></i>
+							<form:input type="text" path="billingAddress.landmark" />
+							<div class="clearfix"></div>
+						</div>
+
+						<form:label path="billingAddress.cityname">City Name</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-screenshot" aria-hidden="true"></i>
+							<form:input path="billingAddress.cityname" />
+							<div class="clearfix"></div>
+						</div>
+
+						<form:label path="billingAddress.statename">State Name</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-screenshot" aria-hidden="true"></i>
+							<form:input path="billingAddress.statename" />
+							<div class="clearfix"></div>
+						</div>
+
+
+						<form:label path="billingAddress.countryname">Country Name</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-globe" aria-hidden="true"></i>
+							<form:input path="billingAddress.countryname" />
+							<div class="clearfix"></div>
+						</div>
+
+
+						<form:label path="billingAddress.zipcode">Zip Code</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-asterisk" aria-hidden="true"></i>
+							<form:input path="billingAddress.zipcode" />
+							<div class="clearfix"></div>
+						</div>
+						<br>
+<!-- 						shipping address -->
+
+						<h3>Shipping Address</h3>
+						<form:label path="shippingAddress.flatno">Flat No</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
+							<form:input type="text" path="shippingAddress.flatno" />
+							<div class="clearfix"></div>
+						</div>
+						<form:label path="shippingAddress.buildingname">Building Name</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-bookmark" aria-hidden="true"></i>
+							<form:input path="shippingAddress.buildingname" />
+							<div class="clearfix"></div>
+						</div>
+
+						<form:label path="shippingAddress.localityname">Locality Name</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-road" aria-hidden="true"></i>
+							<form:input path="shippingAddress.localityname" />
+							<div class="clearfix"></div>
+						</div>
+
+						<form:label path="shippingAddress.landmark">Landmark</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-picture" aria-hidden="true"></i>
+							<form:input type="text" path="shippingAddress.landmark" />
+							<div class="clearfix"></div>
+						</div>
+
+						<form:label path="shippingAddress.cityname">City Name</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-screenshot" aria-hidden="true"></i>
+							<form:input path="shippingAddress.cityname" />
+							<div class="clearfix"></div>
+						</div>
+
+						<form:label path="shippingAddress.statename">State Name</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-screenshot" aria-hidden="true"></i>
+							<form:input path="shippingAddress.statename" />
+							<div class="clearfix"></div>
+						</div>
+
+
+						<form:label path="shippingAddress.countryname">Country Name</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-globe" aria-hidden="true"></i>
+							<form:input path="shippingAddress.countryname" />
+							<div class="clearfix"></div>
+						</div>
+
+
+						<form:label path="shippingAddress.zipcode">Zip Code</form:label>
+						<div class="key">
+							<i class="glyphicon glyphicon-asterisk" aria-hidden="true"></i>
+							<form:input path="shippingAddress.zipcode" />
+							<div class="clearfix"></div>
+						</div>
+
+<%-- 						<form:input type="hidden" path="cart.totalprice" value="0" /> --%>
+
+						<input type="submit" value="Submit">
+					
+				</div>
+				</form:form>
+			</div>
+		</div>
 <!-- //footer-->
 <!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
+<!-- <script type="text/javascript">
+	$(document).ready(function() {
+
 			var defaults = {
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
 			easingType: 'linear' 
 			};
-		*/								
+							
 		$().UItoTop({ easingType: 'easeOutQuart' });
 		});
-	</script>
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</script> -->
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> 
 <!-- //smooth scrolling -->
-<!-- for bootstrap working -->
-		<script src="${js}/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-<script type='text/javascript' src="${js}/jquery.mycart.js"></script>
-  <script type="text/javascript">
-  $(function () {
+ <!-- for bootstrap working --> 
+<script src="${js}/bootstrap.js"></script> 
+<!-- //for bootstrap working --> 
+<script type='text/javascript' src="${js}/jquery.mycart.js"></script> 
+<!-- <script type="text/javascript"> 
+ $(function () {
 
     var goToCartIcon = function($addTocartBtn){
       var $cartIcon = $(".my-cart-icon");
@@ -121,7 +253,7 @@
     });
 
   });
-  </script>
+</script> -->
 <%@ include file="shared/footer.jsp" %>
 </body>
 </html>

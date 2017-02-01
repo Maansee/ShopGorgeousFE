@@ -82,7 +82,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 			<div class="head-t">
 				<ul class="card">
-					<li><a href="wishlist" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
+					<!-- <li><a href="wishlist" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li> -->
 <!-- 					<li><a href="login" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li> -->
 <!-- when user logged in -->
 						<c:if test="${pageContext.request.userPrincipal.name != null }">
@@ -198,8 +198,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</div>
 					</nav>
 					 <div class="cart" >
-					
-						<span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+						
+						<span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"><a href="<c:url value='/cart/getCartId'/>"> Cart 
+					</a></span></span><span>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -207,3 +208,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>			
 </div>
   <!---->
+  
+  <%-- <div class="header-right2">
+						<div class="cart box_1">
+						<a>
+							<a href="<c:url value='/cart/getCartId'/>"> Cart <img src="${img}/bag.png" alt="" allign="center" />
+							</a>
+						</a>
+						</div>
+						</div>
+					</div> --%>
+  <script src="${js}/angular.min.js"></script>

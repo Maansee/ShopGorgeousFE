@@ -62,27 +62,27 @@
 
 <!-- //footer-->
 <!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
+<!-- <script type="text/javascript">
+$(document).ready(function() {
+
+	var defaults = {
+		containerID: 'toTop', // fading element id
+		containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
 			easingType: 'linear' 
 			};
-		*/								
-		$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+							
+	$().UItoTop({ easingType: 'easeOutQuart' });
+	});
+</script>  -->
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> 
 <!-- //smooth scrolling -->
-<!-- for bootstrap working -->
-		<script src="${js}/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-<script type='text/javascript' src="${js}/jquery.mycart.js"></script>
-  <script type="text/javascript">
-  $(function () {
+<!-- for bootstrap working --> 
+<script src="${js}/bootstrap.js"></script> 
+<!-- //for bootstrap working --> 
+<%-- <script type='text/javascript' src="${js}/jquery.mycart.js"></script> 
+<script type="text/javascript"> 
+ $(function () {
 
     var goToCartIcon = function($addTocartBtn){
       var $cartIcon = $(".my-cart-icon");
@@ -119,7 +119,7 @@
     });
 
   });
-  </script>
+</script> --%>
 <%@ include file="shared/footer.jsp" %>
 </body>
 </html>

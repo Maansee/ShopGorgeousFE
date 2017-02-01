@@ -52,88 +52,67 @@
 			</div>
 		</div>
 
-<h3>Category List</h3>
 
-<table class="tg" border=1 align="center">
-	<tr>
-		<th width="80">Category ID</th>
-		<th width="120">Category Name</th>
-		<th width="120">Category Description</th>
-		<th width="60">Edit</th>
-		<th width="60">Delete</th>
-	</tr>
-	<c:forEach items="${categoryList}" var="cat">
-		<tr>
-
-			<td><c:out value="${cat.category_id}" /></td>
-			<td><c:out value="${cat.category_name}" /></td>
-			<td><c:out value="${cat.category_description}" /></td>
-			<td><a href="<c:url value='/editcategory/${cat.category_id}' />">Edit</a></td>
-			<td><a
-				href="<c:url value='/removecategory/${cat.category_id}' />">Delete</a></td>
-		</tr>
-	</c:forEach>
-</table>
 <!-- //footer-->
 <!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
-			var defaults = {
+<!-- <script type="text/javascript">
+$(document).ready(function() {
+
+		var defaults = {
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
-			easingType: 'linear' 
+ 			easingType: 'linear' 
 			};
-		*/								
-		$().UItoTop({ easingType: 'easeOutQuart' });
+										
+ 		$().UItoTop({ easingType: 'easeOutQuart' });
 		});
-	</script>
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!-- //smooth scrolling -->
+ 	</script>  -->
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> -->
+<!-- smooth scrolling -->
 <!-- for bootstrap working -->
-		<script src="${js}/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-<script type='text/javascript' src="${js}/jquery.mycart.js"></script>
-  <script type="text/javascript">
-  $(function () {
+		<script src="${js}/bootstrap.js"></script> 
+<!-- for bootstrap working -->
+<%-- <script type='text/javascript' src="${js}/jquery.mycart.js"></script> 
+ <script type="text/javascript">
+$(function () {
 
     var goToCartIcon = function($addTocartBtn){
       var $cartIcon = $(".my-cart-icon");
-      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
-      $addTocartBtn.prepend($image);
-      var position = $cartIcon.position();
-      $image.animate({
-        top: position.top,
+       var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+       $addTocartBtn.prepend($image);
+       var position = $cartIcon.position();
+       $image.animate({
+         top: position.top,
         left: position.left
-      }, 500 , "linear", function() {
-        $image.remove();
-      });
-    }
+       }, 500 , "linear", function() {
+       $image.remove();
+       });
+     }
 
-    $('.my-cart-btn').myCart({
+     $('.my-cart-btn').myCart({
       classCartIcon: 'my-cart-icon',
-      classCartBadge: 'my-cart-badge',
+       classCartBadge: 'my-cart-badge',
       affixCartIcon: true,
-      checkoutCart: function(products) {
+       checkoutCart: function(products) {
         $.each(products, function(){
-          console.log(this);
-        });
-      },
-      clickOnAddToCart: function($addTocart){
+           console.log(this);
+         });
+       },
+       clickOnAddToCart: function($addTocart){
         goToCartIcon($addTocart);
       },
-      getDiscountPrice: function(products) {
-        var total = 0;
-        $.each(products, function(){
-          total += this.quantity * this.price;
-        });
+       getDiscountPrice: function(products) {
+         var total = 0;
+         $.each(products, function(){
+           total += this.quantity * this.price;
+         });
         return total * 1;
-      }
+       }
     });
 
-  });
-  </script>
+   });
+  </script> --%>
 <%@ include file="shared/footer.jsp" %>
 </body>
 </html>

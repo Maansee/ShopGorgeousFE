@@ -63,11 +63,11 @@ public class HomeController {
 		return model;
 	}
 
-	@RequestMapping("/product")
-	public ModelAndView product() {
-		ModelAndView model = new ModelAndView("product");
-		return model;
-	}
+//	@RequestMapping("/product")
+//	public ModelAndView product() {
+//		ModelAndView model = new ModelAndView("product");
+//		return model;
+//	}
 
 	@RequestMapping("/contact")
 	public ModelAndView contact() {

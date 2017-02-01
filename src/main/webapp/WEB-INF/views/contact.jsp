@@ -148,43 +148,43 @@
 
 <!-- //footer-->
 <!-- tabs -->
-<script src="${js}/easyResponsiveTabs.js" type="text/javascript"></script>
-	<script type="text/javascript">
+script src="${js}/easyResponsiveTabs.js" type="text/javascript"></script> 
+<script type="text/javascript"> 
 		$(document).ready(function () {
 			$('#horizontalTab').easyResponsiveTabs({
-			type: 'default', //Types: default, vertical, accordion           
-			width: 'auto', //auto or any width like 600px
-			fit: true   // 100% fit in a container
-			});
+		type: 'default', //Types: default, vertical, accordion           
+		width: 'auto', //auto or any width like 600px
+ 			fit: true   // 100% fit in a container
+ 			});
 		});				
-	</script>
-<!-- //tabs -->
-<!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
+</script> 
+<!-- //tabs --> 
+<!-- smooth scrolling --> 
+<script type="text/javascript"> 
+	$(document).ready(function() {
+
 			var defaults = {
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
 			easingType: 'linear' 
 			};
-		*/								
+							
 		$().UItoTop({ easingType: 'easeOutQuart' });
 		});
-	</script>
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</script> 
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> 
 <!-- //smooth scrolling -->
-<!-- for bootstrap working -->
-		<script src="${js}/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-<script type='text/javascript' src="${js}/jquery.mycart.js"></script>
-  <script type="text/javascript">
+<!-- for bootstrap working --> 
+<script src="${js}/bootstrap.js"></script>
+<!-- //for bootstrap working --> 
+<script type='text/javascript' src="${js}/jquery.mycart.js"></script> 
+  <script type="text/javascript"> 
   $(function () {
 
     var goToCartIcon = function($addTocartBtn){
       var $cartIcon = $(".my-cart-icon");
-      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+     var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
       $addTocartBtn.prepend($image);
       var position = $cartIcon.position();
       $image.animate({
@@ -193,10 +193,10 @@
       }, 500 , "linear", function() {
         $image.remove();
       });
-    }
+  }
 
-    $('.my-cart-btn').myCart({
-      classCartIcon: 'my-cart-icon',
+   $('.my-cart-btn').myCart({
+     classCartIcon: 'my-cart-icon',
       classCartBadge: 'my-cart-badge',
       affixCartIcon: true,
       checkoutCart: function(products) {
@@ -217,8 +217,7 @@
     });
 
   });
-  </script>
-
+ </script> 
 <%@include file = "shared/footer.jsp" %>  
 </body>
 </html>
