@@ -7,7 +7,7 @@ var myapp = angular
 					$scope.getProducts = function() {
 						$http
 								.get(
-										'/ShopGorgeousFE/listproductsjson')
+										'http://localhost:8081/ShopGorgeousFE/listproductsjson')
 								.success(function(data) {
 									$scope.product1 = data;
 								})
@@ -16,7 +16,7 @@ var myapp = angular
 					$scope.addToCart = function(productid) {
 
 						$http.put(
-								'/ShopGorgeousFE/cart/add/'
+								'http://localhost:8081/ShopGorgeousFE/cart/add/'
 										+ productid).success(function() {
 
 							alert('Added Successfully to the cart!');
@@ -25,7 +25,7 @@ var myapp = angular
 
 					$scope.refreshCart = function() {
 						$http.get(
-								'/ShopGorgeousFE/cart/getCart/'
+								'http://localhost:8081/ShopGorgeousFE/cart/getCart/'
 										+ $scope.cartId).success(
 								function(data) {
 									$scope.cart = data;
@@ -41,7 +41,7 @@ var myapp = angular
 
 					$scope.removeFromCart = function(cartitemid) {
 						$http.put(
-								'/ShopGorgeousFE/cart/removecartitem/'
+								'http://localhost:8081/ShopGorgeousFE/cart/removecartitem/'
 										+ cartitemid).success(function() {
 							$scope.refreshCart();
 							alert('Removed Successfully from the cart!');
@@ -51,7 +51,7 @@ var myapp = angular
 					$scope.clearCart = function() {
 
 						$http.put(
-								'/ShopGorgeousFE/cart/removeAllItems/'
+								'http://localhost:8081/ShopGorgeousFE/cart/removeAllItems/'
 										+ $scope.cartId)
 
 						.success(function() {

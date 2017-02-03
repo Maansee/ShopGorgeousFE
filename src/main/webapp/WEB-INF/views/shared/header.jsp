@@ -142,11 +142,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										<div class="col-sm-3">
 											<ul class="multi-column-dropdown">
 			
-												<li><a href="products"><i class="fa fa-angle-right" aria-hidden="true"></i>Skincare</a></li>
-												<li><a href="products"><i class="fa fa-angle-right" aria-hidden="true"></i>Cosmetics</a></li>
+												<li><a href="productlist"><i class="fa fa-angle-right" aria-hidden="true"></i>Show all Products</a></li>
+											<!-- 	<li><a href="products"><i class="fa fa-angle-right" aria-hidden="true"></i>Cosmetics</a></li>
 												<li><a href="products"> <i class="fa fa-angle-right" aria-hidden="true"></i>Aromatics</a></li>
 												<li><a href="products"><i class="fa fa-angle-right" aria-hidden="true"></i>Men's</a></li>
-												<li><a href="products"><i class="fa fa-angle-right" aria-hidden="true"></i>Accessories</a></li>
+												<li><a href="products"><i class="fa fa-angle-right" aria-hidden="true"></i>Accessories</a></li> -->
 										
 											</ul>
 										

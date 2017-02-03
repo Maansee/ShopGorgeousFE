@@ -124,7 +124,7 @@ public class ProductController {
 	public ModelAndView getRecord(@PathVariable("productid") int id, Model model) {
 		Product productObject = productDAO.get(id);
 		
-		return new ModelAndView("singleProduct", "productObject", productObject);
+		return new ModelAndView("single", "productObject", productObject);
 	}
 }
 	

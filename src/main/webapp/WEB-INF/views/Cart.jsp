@@ -96,7 +96,7 @@ input[type=text] {
 			<div class="login">
 				<div class="main-agi">
 					<div class="form-w3agile">
-						<h3>Items in your Cart</h3>
+						<h3>Items in your Cart{{cartId}}</h3>
 						<div class="table-responsive">
 							<table class="tg">
 								<tr>
@@ -125,7 +125,7 @@ input[type=text] {
 								<h2><span class="label label-info">Grand Total = {{calculateGrandTotal()}}</h2>
 							
 								<br>
-								<c:url value="/listproduct" var="url"></c:url>
+								<c:url value="/productlist" var="url"></c:url>
 
 
 								<a href="${url}" class="btn btn-default"> Continue shopping</a>
@@ -151,8 +151,11 @@ input[type=text] {
 
 
 
-
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> 
+<script src="${js}/bootstrap.js"></script> 
+<script type='text/javascript' src="${js}/jquery.mycart.js"></script> 
 	<%@ include file="shared/footer.jsp"%>
 	<script src="${js}/cartcontroller.js"></script>
+	
 </body>
 </html>

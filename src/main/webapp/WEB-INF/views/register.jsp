@@ -33,7 +33,7 @@
 					<form:form action="saveuser" commandName="Userdata">
 						<div class="key">
 							<i class="fa fa-user" aria-hidden="true"></i>
-							<input  type="text" value="username" name="username" path="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+							<input  type="text" value="Name" name="username" path="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
 <%-- 							<form:input type="text" path="name" /> --%>
 							<div class="clearfix"></div>
 						</div>

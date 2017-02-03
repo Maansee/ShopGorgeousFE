@@ -30,7 +30,7 @@ public class HomeController {
 		return model;
 	}
 
-	@RequestMapping("/login")
+	/*@RequestMapping("/login")
 	public ModelAndView login() {
 		ModelAndView model = new ModelAndView("login");
 		return model;
@@ -53,7 +53,7 @@ public class HomeController {
 		}System.out.println("Logout3");
 //		model.addAttribute("logout", "Have a great time! Thank you for visiting us.");
 		return "login";
-	}
+	}*/
 
 
 	

@@ -56,7 +56,7 @@
 	
 <!-- <!-- //footer--> -->
 <!-- <!-- smooth scrolling --> -->
-<!-- <script type="text/javascript"> -->
+<!-- <script type="text/javascript">
 		$(document).ready(function() {
 	
 		var defaults = {
@@ -68,7 +68,7 @@
  										
  		$().UItoTop({ easingType: 'easeOutQuart' });
 		});
- 	</script>  -->
+ 	</script>  --> 
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> 
  <!--  smooth scrolling --> 
 <!-- for bootstrap working --> 

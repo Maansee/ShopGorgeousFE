@@ -30,8 +30,8 @@
 				<div class="main-agi">
 					<div class="form-w3agile">
 						<h3>Product List</h3>
-						<div class="table-responsive">
-							<table class="tg" border = 1>
+						<div class="table-responsive" align="center">
+							<table class="tg" >
 								<tr>
 									<security:authorize access="hasRole('ROLE_ADMIN')">
 										<th width="80">Product ID</th>
