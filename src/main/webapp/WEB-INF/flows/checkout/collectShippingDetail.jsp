@@ -179,5 +179,9 @@ body {
 	</div>
 </body>
 
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> 
+<script src="${js}/bootstrap.js"></script> 
+<script type='text/javascript' src="${js}/jquery.mycart.js"></script> 
 
 <%@ include file="/WEB-INF/views/shared/footer.jsp"%>
+</html>

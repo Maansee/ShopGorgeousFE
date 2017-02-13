@@ -13,14 +13,15 @@
 		<div class="col-md-3 footer-grid">
 			<h3>About Us</h3>
 			<p>The best place for makeover</p>
+			<a href="about">Read...</a>
+			
 		</div>
 		<div class="col-md-3 footer-grid ">
 			<h3>Menu</h3>
 			<ul>
 				<li><a href="index">Home</a></li>
 				<li><a href="about">About Us</a></li>
-				<li><a href="care">Products</a></li>
-				<li><a href="hold">Admin</a></li>						 
+				<li><a href="productlist">Products</a></li>				 
 				<li><a href="contact">Contact</a></li>
 			</ul>
 		</div>
@@ -30,7 +31,7 @@
 				<li><a href="shipping">Shipping</a></li>
 				<li><a href="terms">Terms & Conditions</a></li>
 				<li><a href="contact">Contact</a></li>
-<!-- 				<li><a href="offer">Online Shopping</a></li>						  -->
+
 				 
 			</ul>
 		</div>
@@ -39,7 +40,7 @@
 			<ul>
 				<li><a href="login">Login</a></li>
 				<li><a href="register">Register</a></li>
-				<li><a href="wishlist">Wishlist</a></li>
+				
 				
 			</ul>
 		</div>
@@ -55,7 +56,7 @@
 				</ul>
 				<div class=" address">
 					<div class="col-md-4 fo-grid1">
-							<p><i class="fa fa-home" aria-hidden="true"></i>M G Road, Fort ,Mumbai - 400001</p>
+							<p><i class="fa fa-home" aria-hidden="true"></i>Fashion Street, Marine Lines, Mumbai, Maharashtra 400020</p>
 					</div>
 					<div class="col-md-4 fo-grid1">
 							<p><i class="fa fa-phone" aria-hidden="true"></i>+91 1111116965</p>	
@@ -68,7 +69,7 @@
 					</div>
 			</div>
 		<div class="copy-right">
-			<p> &copy; 2016 Shop Gorgeous. All Rights Reserved</p>
+			<p> &copy; 2017 Shop Gorgeous. All Rights Reserved</p>
 		</div>
 	</div>
 </div>

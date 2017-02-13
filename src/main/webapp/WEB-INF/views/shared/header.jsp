@@ -72,13 +72,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 </head>
 <body>
-<a href="offer"><img src="${img}/download.png" class="img-head" alt=""></a>
+<a href="productlist"><img src="${img}/download.png" class="img-head" alt=""></a>
 <div class="header">
 
 		<div class="container">
 			
 			<div class="logo">
-				<h1 ><a href="index"><b>S<br>H<br>O<br>P</b>Gorgeous<span>The Best Beauty Store</span></a></h1>
+				<h1 ><a href="<c:url value='/index'/>"><b>S<br>H<br>O<br>P</b>Gorgeous<span>The Best Beauty Store</span></a></h1>
 			</div>
 			<div class="head-t">
 				<ul class="card">
@@ -100,7 +100,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<li><a href="<c:url value='/register'/>"><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
 						</c:if>
 <!-- 					<li><a href="register" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li> -->
-					<li><a href="shipping" ><i class="fa fa-ship" aria-hidden="true"></i>Shipping</a></li>
+					<li><a href="<c:url value='/shipping'/>" ><i class="fa fa-ship" aria-hidden="true"></i>Shipping</a></li>
 				</ul>	
 			</div>
 			
@@ -131,9 +131,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</div> 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav ">
-							<li ><a href="index" class="hyper "><span>Home</span></a></li>	
+							<li ><a href="<c:url value='/index'/>" class="hyper "><span>Home</span></a></li>	
 							
-							<li class = " "><a href="about" class="hyper"><span>About Us</span></a></li>
+							<li class = " "><a href="<c:url value='/about'/>" class="hyper"><span>About Us</span></a></li>
 							
 							<li  class="dropdown ">
 								<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>Products<b class="caret"></b></span></a>
@@ -143,17 +143,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<ul class="multi-column-dropdown">
 			
 												<li><a href="productlist"><i class="fa fa-angle-right" aria-hidden="true"></i>Show all Products</a></li>
-											<!-- 	<li><a href="products"><i class="fa fa-angle-right" aria-hidden="true"></i>Cosmetics</a></li>
-												<li><a href="products"> <i class="fa fa-angle-right" aria-hidden="true"></i>Aromatics</a></li>
-												<li><a href="products"><i class="fa fa-angle-right" aria-hidden="true"></i>Men's</a></li>
-												<li><a href="products"><i class="fa fa-angle-right" aria-hidden="true"></i>Accessories</a></li> -->
 										
 											</ul>
 										
 										</div>
 							
 										<div class="col-sm-3 w3l">
-											<a href="products"><img src="${img}/cosmetics.jpg" class="img-responsive" alt=""></a>
+											<a href="<c:url value='/productlist'/>"><img src="${img}/cosmetics.jpg" class="img-responsive" alt=""></a>
 										</div>
 										<div class="clearfix"></div>
 									</div>	
@@ -166,9 +162,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									<div class="row">
 										<div class="col-sm-3">
 											<ul class="multi-column-dropdown">
-												<li><a href="newproduct"><i class="fa fa-angle-right" aria-hidden="true"></i>Add Products</a></li>
-												<li><a href="supplier"><i class="fa fa-angle-right" aria-hidden="true"></i>Add Suppliers</a></li>
-												<li><a href="category"><i class="fa fa-angle-right" aria-hidden="true"></i>Add Category</a></li>
+												<li><a href="<c:url value='/newproduct'/>"><i class="fa fa-angle-right" aria-hidden="true"></i>Add Products</a></li>
+												<li><a href="<c:url value='/supplier'/>"><i class="fa fa-angle-right" aria-hidden="true"></i>Add Suppliers</a></li>
+												<li><a href="<c:url value='/category'/>"><i class="fa fa-angle-right" aria-hidden="true"></i>Add Category</a></li>
 												
 										
 											</ul>
@@ -177,9 +173,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										<div class="col-sm-3">
 											
 											<ul class="multi-column-dropdown">
-												<li><a href="productlist"><i class="fa fa-angle-right" aria-hidden="true"></i>Show Products</a></li>
-												<li><a href="supplierlist"><i class="fa fa-angle-right" aria-hidden="true"></i>Show Suppliers </a></li>
-												<li><a href="categorylist"><i class="fa fa-angle-right" aria-hidden="true"></i>Show Categories </a></li>
+												<li><a href="<c:url value='/productlist'/>"><i class="fa fa-angle-right" aria-hidden="true"></i>Show Products</a></li>
+												<li><a href="<c:url value='/supplierlist'/>"><i class="fa fa-angle-right" aria-hidden="true"></i>Show Suppliers </a></li>
+												<li><a href="<c:url value='/categorylist'/>"><i class="fa fa-angle-right" aria-hidden="true"></i>Show Categories </a></li>
 												
 										
 											</ul>
@@ -193,14 +189,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							
 							
-							<li><a href="contact" class="hyper"><span>Contact Us</span></a></li>
+							<li><a href="<c:url value='/contact'/>" class="hyper"><span>Contact Us</span></a></li>
 						</ul>
 					</div>
 					</nav>
 					 <div class="cart" >
 						
-						<span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"><a href="<c:url value='/cart/getCartId'/>"> Cart 
-					</a></span></span><span>
+						<span class="badge badge-notify my-cart-badge"><a href="<c:url value='/cart/getCartId'/>"> <span class="fa fa-shopping-cart my-cart-icon">Cart 
+					</span></a></span>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -208,14 +204,5 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>			
 </div>
   <!---->
-  
-  <%-- <div class="header-right2">
-						<div class="cart box_1">
-						<a>
-							<a href="<c:url value='/cart/getCartId'/>"> Cart <img src="${img}/bag.png" alt="" allign="center" />
-							</a>
-						</a>
-						</div>
-						</div>
-					</div> --%>
+
   <script src="${js}/angular.min.js"></script>

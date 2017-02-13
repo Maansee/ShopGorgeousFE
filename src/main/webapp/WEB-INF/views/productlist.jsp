@@ -12,6 +12,169 @@
 <spring:url value="/resources/video" var="video" />
 
 
+<style type="text/css">
+body {
+	background: url("${img}/profilebg.jpg") no-repeat 0px 0px;
+	background-size: cover;
+	font-family: 'Open Sans', sans-serif;
+	background-attachment: fixed;
+}
+.main-agi {
+	background: #fff;
+	width: 50%;
+	margin: 0em auto;
+	box-shadow: 0px 0px 15px 0px #D6D6D6;
+	-o-box-shadow: 0px 0px 15px 0px #D6D6D6;
+	-moz-box-shadow: 0px 0px 15px 0px #D6D6D6;
+	-webkit-box-shadow: 0px 0px 15px 0px #D6D6D6;
+	padding: 3em;
+}
+input[type=text]:focus {
+	width: 80%;
+}
+input[type=text] {
+	flex: 1;
+	padding: 0.6em;
+	border: 0.2em solid lightgreen;
+	width: 150px;
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
+.tg {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-color: #ccc;
+	border-color: #ccc;
+	
+}
+.tg td {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+	word-break: normal;
+	border-color: #ccc;
+	color: #333;
+	background-color: #fff;
+}
+.tg th {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+	word-break: normal;
+	border-color: #ccc;
+	color: #333;
+	background-color: #f0f0f0;
+}
+.tg .tg-4eph {
+	background-color: #f9f9f9
+}
+</style>
+
+
+
+<style>
+.sidenav {
+	height: 55%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 50;
+	left: 0;
+	background-color: #ffffff;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 60px;
+	color: #818181;
+	display: block;
+	transition: 0.3s
+}
+.sidenav a:hover, .offcanvas a:focus {
+	color: #f1f1f1;
+}
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 20px;
+	}
+}
+.inside {
+	padding: 1.6em;
+}
+input[type=radio] {
+	display: none;
+}
+input[type=radio]+label {
+	display: inline-block;
+	margin: -2px;
+	padding: 4px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #f5f5f5;
+	background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff),
+		to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top, #fff, #e6e6e6);
+	background-image: -o-linear-gradient(top, #fff, #e6e6e6);
+	background-image: linear-gradient(to bottom, #fff, #e6e6e6);
+	background-repeat: repeat-x;
+	border: 1px solid #ccc;
+	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	border-bottom-color: #b3b3b3;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',
+		endColorstr='#ffe6e6e6', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px
+		rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px
+		rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px
+		rgba(0, 0, 0, 0.05);
+}
+input[type=radio]:checked+label {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px
+		rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px
+		rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px
+		rgba(0, 0, 0, 0.05);
+	background-color: #e0e0e0;
+}
+</style>
+
+
+
 <%@ include file="shared/header.jsp" %>
 
 <body ng-app="prodapp" ng-controller="myprodController"
@@ -20,8 +183,10 @@
 	<div>
 		<br>
 		<div align="center">
+			
 			<input type="text" ng-model="searchConditionprod"
-				placeholder="Search Products....">
+				placeholder="Search Products..." name="Search Products..."onfocus="if(this.value=='Search Products...') this.value='';" onblur="if(this.value=='') this.value='Search Products...';" >
+
 		</div>
 
 
@@ -90,102 +255,14 @@
 			</div>
 		</div>
 	</div>
-<!-- 	<h3>Product List</h3> -->
 
-<!-- <table class="tg" border=1 align="center"> -->
-<!-- 	<tr> -->
-	
-<!-- 		<th width="80">Product ID</th> -->
-<!-- 		<th width="120">Product Name</th> -->
-<!-- 		<th width="120">Product Description</th> -->
-<!-- 		<th width="120">Product Image</th> -->
-		
-<!-- 		<th width="60">Edit</th> -->
-<!-- 		<th width="60">Delete</th> -->
-<!-- 	</tr> -->
-<!-- 	<c:forEach items="${productList}" var="p"> -->
-<!-- 		<tr> -->
-
-<!-- 			<td><c:out value="${p.productid}" /></td> -->
-<!-- 			<td><c:out value="${p.productname}" /></td> -->
-<!-- 			<td><c:out value="${p.productdescription}" /></td> -->
-			
-<!-- 			<c:url value="/resources/images/${p.productname}.jpg" var="imgg" /> -->
-
-<!-- 			<td> <img src="${imgg}" alt="prodimage" height="80" width="80" /></td> -->
-			
-<!-- 			<td><a href="<c:url value='/editproduct/${p.productid}' />">Edit</a></td> -->
-<!-- 			<td><a href="<c:url value='/removeproduct/${p.productid}' />">Delete</a></td> -->
-<!-- 		</tr> -->
-<!-- 	</c:forEach> -->
-<!-- </table> -->
 <!-- //footer-->
-<!-- smooth scrolling -->
-<!-- <script type="text/javascript">
-	$(document).ready(function() {
 
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-
-		$().UItoTop({
-			easingType : 'easeOutQuart'
-		});
-	});
-</script>
- --><a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- //smooth scrolling -->
 <!-- for bootstrap working --> 
 <script src="${js}/bootstrap.js"></script>
- <!-- //for bootstrap working --> 
-<%-- <script type='text/javascript' src="${js}/jquery.mycart.js"></script> 
-<script type="text/javascript"> 
-	$(function() {
-
-		var goToCartIcon = function($addTocartBtn) {
-			var $cartIcon = $(".my-cart-icon");
-			var $image = $(
-					'<img width="30px" height="30px" src="'
-							+ $addTocartBtn.data("image") + '"/>').css({
-				"position" : "fixed",
-				"z-index" : "999"
-			});
-			$addTocartBtn.prepend($image);
-			var position = $cartIcon.position();
-			$image.animate({
-				top : position.top,
-				left : position.left
-			}, 500, "linear", function() {
-				$image.remove();
-			});
-		}
-
-		$('.my-cart-btn').myCart({
-			classCartIcon : 'my-cart-icon',
-			classCartBadge : 'my-cart-badge',
-			affixCartIcon : true,
-			checkoutCart : function(products) {
-				$.each(products, function() {
-					console.log(this);
-				});
-			},
-			clickOnAddToCart : function($addTocart) {
-				goToCartIcon($addTocart);
-			},
-			getDiscountPrice : function(products) {
-				var total = 0;
-				$.each(products, function() {
-					total += this.quantity * this.price;
-				});
-				return total * 1;
-			}
-		});
-
-	});
-<!-- </script> --> --%>
+ 
 <%@include file="shared/footer.jsp"%>
 <script src="${js}/app.js"></script>
 </body>

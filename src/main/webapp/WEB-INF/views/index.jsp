@@ -17,13 +17,8 @@
 <div data-vide-bg="${video}/video">
     <div class="container">
 		<div class="banner-info">
-			<h3>Come and re-discover yourself </h3>	
-			<div class="search-form">
-				<form action="#" method="post">
-					<input type="text" placeholder="Search..." name="Search...">
-					<input type="submit" value=" " >
-				</form>
-			</div>		
+			<h2>Come and re-discover yourself </h2>	
+		
 		</div>	
     </div>
 </div>
@@ -38,7 +33,7 @@
 		
 		<div class="col-md-4 m-w3ls">
 			<div class="col-md1 ">
-				<a href="products">
+				<a href="productlist">
 					<img src="${img}/co.jpg" class="img-responsive img" alt="">
 					<div class="big-sa">
 						
@@ -49,7 +44,7 @@
 		</div>
 		<div class="col-md-4 m-w3ls1">
 			<div class="col-md ">
-				<a href="products">
+				<a href="productlist">
 					<img src="${img}/co1.jpg" class="img-responsive img" alt="">
 					<div class="big-sale">
 						<div class="big-sale1">
@@ -61,7 +56,7 @@
 		</div>
 		<div class="col-md-4 m-w3ls">
 			<div class="col-md2 ">
-				<a href="sproducts">
+				<a href="productlist">
 					<img src="${img}/co2.jpg" class="img-responsive img1" alt="">
 					<div class="big-sale2">
 							
@@ -87,20 +82,20 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-         <a href="skincare"> <img class="first-slide" src="${img}/ba1.jpg" alt="First slide"></a>
+         <a href="productlist"> <img class="first-slide" src="${img}/ba1.jpg" alt="First slide"></a>
        
         </div>
         <div class="item">
-         <a href="care"> <img class="second-slide " src="${img}/ba2.jpg" alt="Second slide"></a>
+         <a href="productlist"> <img class="second-slide " src="${img}/ba2.jpg" alt="Second slide"></a>
          
         </div>
         <div class="item">
-          <a href="hold"><img class="third-slide " src="${img}/ba3.jpg" alt="Third slide"></a>
+          <a href="productlist"><img class="third-slide " src="${img}/ba3.jpg" alt="Third slide"></a>
           
         </div>
         
         <div class="item">
-          <a href="hold"><img class="fourth-slide " src="${img}/ba4.png" alt="Third slide"></a>
+          <a href="productlist"><img class="fourth-slide " src="${img}/ba4.png" alt="Third slide"></a>
           
         </div>
         
@@ -110,66 +105,13 @@
     </div><!-- /.carousel -->
 
 
-<!-- smooth scrolling -->
-<!-- <script type="text/javascript">
-	$(document).ready(function() {
-	
-	var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-							
-		$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-</script>  -->
-<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> 
-<!-- //smooth scrolling --> 
+<!-- //footer-->
+
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
 <!-- for bootstrap working --> 
-<script src="${js}/bootstrap.js"></script> 
-<!-- //for bootstrap working --> 
-<%-- <script type='text/javascript' src="${js}/jquery.mycart.js"></script> 
-<script type="text/javascript"> 
-  $(function () {
+<script src="${js}/bootstrap.js"></script>
 
-    var goToCartIcon = function($addTocartBtn){
-      var $cartIcon = $(".my-cart-icon");
-      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
-      $addTocartBtn.prepend($image);
-      var position = $cartIcon.position();
-      $image.animate({
-        top: position.top,
-        left: position.left
-      }, 500 , "linear", function() {
-        $image.remove();
-      });
-    }
-
-    $('.my-cart-btn').myCart({
-      classCartIcon: 'my-cart-icon',
-      classCartBadge: 'my-cart-badge',
-      affixCartIcon: true,
-      checkoutCart: function(products) {
-        $.each(products, function(){
-          console.log(this);
-        });
-      },
-      clickOnAddToCart: function($addTocart){
-        goToCartIcon($addTocart);
-      },
-      getDiscountPrice: function(products) {
-        var total = 0;
-        $.each(products, function(){
-          total += this.quantity * this.price;
-        });
-        return total * 1;
-      }
-    });
-
-  });
-</script> 
- --%>
 </body>
 <%@ include file="shared/footer.jsp" %>
 </html>

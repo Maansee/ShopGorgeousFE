@@ -53,7 +53,7 @@
 					</form>
 				</div>
 				<div class="forg">
-					<a href="<c:url value='/ContactUs'/>" class="forg-left">Forgot Password</a>
+					<a href="<c:url value='/contact'/>" class="forg-left">Forgot Password</a>
 					<a href="register" class="forg-right">Register</a>
 				<div class="clearfix"></div>
 				</div>

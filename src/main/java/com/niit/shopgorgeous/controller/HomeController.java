@@ -63,11 +63,7 @@ public class HomeController {
 		return model;
 	}
 
-//	@RequestMapping("/product")
-//	public ModelAndView product() {
-//		ModelAndView model = new ModelAndView("product");
-//		return model;
-//	}
+
 
 	@RequestMapping("/contact")
 	public ModelAndView contact() {
@@ -83,11 +79,6 @@ public class HomeController {
 		return model;
 	}
 
-	@RequestMapping("/offer")
-	public ModelAndView offer() {
-		ModelAndView model = new ModelAndView("offer");
-		return model;
-	}
 
 	@RequestMapping("/shipping")
 	public ModelAndView shipping() {

@@ -100,7 +100,7 @@ body {
 										</p>
 
 										<p>
-											<c:url value="/listproduct" var="url"></c:url>
+											<c:url value="/productlist" var="url"></c:url>
 											<a href="${url}" class="btn btn-success pull-right">Continue
 												Shopping</a>
 										</p>
@@ -112,4 +112,8 @@ body {
 		</div>
 	</div>
 </body>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> 
+<script src="${js}/bootstrap.js"></script> 
+<script type='text/javascript' src="${js}/jquery.mycart.js"></script> 
 <%@ include file="/WEB-INF/views/shared/footer.jsp"%>
+</html>
