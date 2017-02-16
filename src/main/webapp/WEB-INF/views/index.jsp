@@ -33,7 +33,7 @@
 		
 		<div class="col-md-4 m-w3ls">
 			<div class="col-md1 ">
-				<a href="productlist">
+				<a href="<c:url value='/productlist'/>">
 					<img src="${img}/co.jpg" class="img-responsive img" alt="">
 					<div class="big-sa">
 						
@@ -44,7 +44,7 @@
 		</div>
 		<div class="col-md-4 m-w3ls1">
 			<div class="col-md ">
-				<a href="productlist">
+				<a href="<c:url value='/productlist'/>">
 					<img src="${img}/co1.jpg" class="img-responsive img" alt="">
 					<div class="big-sale">
 						<div class="big-sale1">
@@ -56,7 +56,7 @@
 		</div>
 		<div class="col-md-4 m-w3ls">
 			<div class="col-md2 ">
-				<a href="productlist">
+				<a href="<c:url value='/productlist'/>">
 					<img src="${img}/co2.jpg" class="img-responsive img1" alt="">
 					<div class="big-sale2">
 							
@@ -82,20 +82,20 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-         <a href="productlist"> <img class="first-slide" src="${img}/ba1.jpg" alt="First slide"></a>
+         <a href="<c:url value='/productlist'/>"> <img class="first-slide" src="${img}/ba1.jpg" alt="First slide"></a>
        
         </div>
         <div class="item">
-         <a href="productlist"> <img class="second-slide " src="${img}/ba2.jpg" alt="Second slide"></a>
+         <a href="<c:url value='/productlist'/>"> <img class="second-slide " src="${img}/ba2.jpg" alt="Second slide"></a>
          
         </div>
         <div class="item">
-          <a href="productlist"><img class="third-slide " src="${img}/ba3.jpg" alt="Third slide"></a>
+          <a href="<c:url value='/productlist'/>"><img class="third-slide " src="${img}/ba3.jpg" alt="Third slide"></a>
           
         </div>
         
         <div class="item">
-          <a href="productlist"><img class="fourth-slide " src="${img}/ba4.png" alt="Third slide"></a>
+          <a href="<c:url value='/productlist'/>"><img class="fourth-slide " src="${img}/ba4.png" alt="Third slide"></a>
           
         </div>
         

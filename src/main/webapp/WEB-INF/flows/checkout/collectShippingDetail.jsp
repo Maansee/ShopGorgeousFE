@@ -23,12 +23,8 @@
 </head>
 
 <style>
-body {
-	background: url("${img}/profilebg.jpg") no-repeat 0px 0px;
-	background-size: cover;
-	font-family: 'Open Sans', sans-serif;
-	background-attachment: fixed;
-}
+
+
 
 .main-agileits {
 	background: #fff;
@@ -45,7 +41,7 @@ body {
 	display: inline-block;
 	padding: 10px;
 	margin: 10px;
-	background: #0AF;
+	background: purple;
 	/* Font styles */
 	color: white;
 	font-weight: bold;
@@ -53,10 +49,10 @@ body {
 	text-align: center;
 	vertical-align: middle;
 }
-
 .progress {
 	width: 70%;
 }
+
 </style>
 
 <body>

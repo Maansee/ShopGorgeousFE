@@ -27,29 +27,14 @@
 </head>
 
 <style>
-body {
-	background: url("${img}/profilebg.jpg") no-repeat 0px 0px;
-	background-size: cover;
-	font-family: 'Open Sans', sans-serif;
-	background-attachment: fixed;
-}
 
-.main-agileits {
-	background: #fff;
-}
 
-.form-w3agileabc h1 {
-	color: #1565C0;
-	font-size: 2.5em;
-	text-align: center;
-	margin-bottom: 1em;
-}
 
 .metro {
 	display: inline-block;
 	padding: 10px;
 	margin: 10px;
-	background: #0AF;
+	background: green;
 	/* Font styles */
 	color: white;
 	font-weight: bold;
@@ -73,42 +58,34 @@ body {
 				<font color="white">Status: Error!</font>
 			</h1>
 		</div>
+		
+		
 
 		<div class="progress">
 			<div class="progress-bar progress-bar-danger" style="width: 100%"></div>
 		</div>
 	</div>
-	<div class="container-wrapper">
-		<div class="container">
-			<body>
-				<section>
-					<div class="content">
-						<!--login-->
-						<div class="login">
-							<div class="main-agileits">
-								<div class="form-w3agileabc form1">
-									<div class="form-group">
-										<h1>Invalid Cart!</h1>
-										<div class="metro">
-											<p>Nothing was found in the cart! Try again</p>
-										</div>
-										<br> <br>
+	
+			<div class="newimage">
+			<div class="col-md2 ">
+				<a href="<c:url value='/productlist'/>">
+					<img src="${img}/empty-cart.jpg" class="img-responsive img1" alt="" align ="middle">
+					<div class="big-sale2">
+							
+					</div>
+				</a>
+			</div>
 
-
-										<p>
-										<div align="center">
-											<c:url value="/productlist" var="url"></c:url>
-											<a href="${url}" class="btn btn-success">Continue
-												Shopping</a>
-										</div>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-				</section>
 		</div>
-	</div>
+		<div class="clearfix"></div>
+		
+		<div align="center">
+											<c:url value="/productlist" var="url"></c:url>
+											<a href="${url}" class="btn btn-success">Continue Shopping</a>
+											</div>
+											<br> <br>
+		
+	
 </body>
 <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> 
 <script src="${js}/bootstrap.js"></script> 

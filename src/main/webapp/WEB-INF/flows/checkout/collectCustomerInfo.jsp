@@ -5,12 +5,13 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="cd" uri="http://www.springframework.org/tags"%>
 <%@ page isELIgnored="false"%>
-
 <spring:url value="/resources/css" var="css" />
 <spring:url value="/resources/js" var="js" />
 <spring:url value="/resources/images" var="img" />
 <spring:url value="/resources/fonts" var="fonts" />
 <!DOCTYPE html>
+
+
 <html lang="en">
 <head>
 <title>ShopGorgeous Customer Info</title>
@@ -19,16 +20,11 @@
 <link rel="stylesheet" href="${css}/bootstrap.min.css">
 <script src="${js}/jquery.min.js"></script>
 <script src="${js}/bootstrap.min.js"></script>
-
-</head>
-
+<%@ include file="/WEB-INF/views/shared/header.jsp"%>
 <style>
-body {
-	background: url("${img}/profilebg.jpg") no-repeat 0px 0px;
-	background-size: cover;
-	font-family: 'Open Sans', sans-serif;
-	background-attachment: fixed;
-}
+
+
+
 
 .main-agileits {
 	background: #fff;
@@ -45,7 +41,7 @@ body {
 	display: inline-block;
 	padding: 10px;
 	margin: 10px;
-	background: #0AF;
+	background: purple;
 	/* Font styles */
 	color: white;
 	font-weight: bold;
@@ -56,10 +52,10 @@ body {
 .progress {
 	width: 70%;
 }
-</style>
 
+</style>
 <body>
-	<%@ include file="/WEB-INF/views/shared/header.jsp"%>
+	
 	<br>
 	<div align="center">
 		<div class="metro">
@@ -92,7 +88,7 @@ body {
 
 					<form:form commandName="order" class="form-horizontal">
 
-						<h3>Cutomer Basic Info:</h3>
+						<h3>Customer Information:</h3>
 
 						<div class="form-group">
 
@@ -199,4 +195,5 @@ body {
 <script src="${js}/bootstrap.js"></script> 
 <script type='text/javascript' src="${js}/jquery.mycart.js"></script> 
 <%@ include file="/WEB-INF/views/shared/footer.jsp"%>
+</head>
 </html>

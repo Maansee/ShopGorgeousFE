@@ -37,18 +37,7 @@ public class UserController {
 	@Autowired
 	UserCustomer user;
 		
-		
 
-//	
-//		@RequestMapping(value = "/register", method = RequestMethod.POST)
-//		public ModelAndView register() {
-//			System.out.println("in UserController");
-//			User u = new User();
-//		
-//			ModelAndView model = new ModelAndView("register");
-//			model.addObject("Userdata",u);
-//			return model;	
-//			}
 
 	
 		@RequestMapping("/register")
@@ -75,7 +64,7 @@ public class UserController {
 		
 		@RequestMapping("/loginerror")
 		public String LoginError(@RequestParam(value = "error", required = false) String error, Model model) {
-			model.addAttribute("error", "Typos are expected! Pls try again.");
+			model.addAttribute("error", "Invalid Credentials! Try again.");
 			return "login";
 		}
 
@@ -88,17 +77,26 @@ public class UserController {
 				System.out.println("Logout2");
 				new SecurityContextLogoutHandler().logout(request, response, auth);
 			}System.out.println("Logout3");
-//			model.addAttribute("logout", "Have a great time! Thank you for visiting us.");
+			model.addAttribute("logout", "Thank you for visiting us.");
 			return "login";
 		}
 		
 		@RequestMapping(value = "/saveuser", method = RequestMethod.POST)
 		public String adduser(@Valid @ModelAttribute("Userdata")UserCustomer reg,BindingResult result)
 		{
+
+			if (result.hasErrors()) {
+				return "register";
+			} 
+			else {
+			
 			userDAO.save(reg);
 			return "login";
+			}
 		}
 
+		
+		
 }
 
 

@@ -13,24 +13,24 @@
 		<div class="col-md-3 footer-grid">
 			<h3>About Us</h3>
 			<p>The best place for makeover</p>
-			<a href="about">Read...</a>
+			<a href="<c:url value='/about'/>">Read...</a>
 			
 		</div>
 		<div class="col-md-3 footer-grid ">
 			<h3>Menu</h3>
 			<ul>
-				<li><a href="index">Home</a></li>
-				<li><a href="about">About Us</a></li>
-				<li><a href="productlist">Products</a></li>				 
-				<li><a href="contact">Contact</a></li>
+				<li><a href="<c:url value='/index'/>">Home</a></li>
+				<li><a href="<c:url value='/about'/>">About Us</a></li>
+				<li><a href="<c:url value='/productlist'/>">Products</a></li>				 
+				<li><a href="<c:url value='/contact'/>">Contact</a></li>
 			</ul>
 		</div>
 		<div class="col-md-3 footer-grid ">
 			<h3>Customer Services</h3>
 			<ul>
-				<li><a href="shipping">Shipping</a></li>
-				<li><a href="terms">Terms & Conditions</a></li>
-				<li><a href="contact">Contact</a></li>
+				<li><a href="<c:url value='/shipping'/>">Shipping</a></li>
+				<li><a href="<c:url value='/terms'/>">Terms & Conditions</a></li>
+				<li><a href="<c:url value='/contact'/>">Contact</a></li>
 
 				 
 			</ul>
@@ -38,15 +38,15 @@
 		<div class="col-md-3 footer-grid">
 			<h3>My Account</h3>
 			<ul>
-				<li><a href="login">Login</a></li>
-				<li><a href="register">Register</a></li>
+				<li><a href="<c:url value='/login'/>">Login</a></li>
+				<li><a href="<c:url value='/register'/>">Register</a></li>
 				
 				
 			</ul>
 		</div>
 		<div class="clearfix"></div>
 			<div class="footer-bottom">
-				<h2 ><a href="index"><b>S<br>H<br>O<br>P</b>Gorgeous<span>The Best Beauty Store</span></a></h2>
+				<h2 ><a href="<c:url value='/index'/>"><b>S<br>H<br>O<br>P</b>Gorgeous<span>The Best Beauty Store</span></a></h2>
 				<p class="fo-para">Shop Gorgeous is one of the premier online beauty and wellness destination. It offers beauty and wellness products for men and women at best prices. The products are 100 percent genuine and authentic, sourced directly from the brands. Visit us for a hassle-free shopping experience.</p>
 				<ul class="social-fo">
 					<li><a href="#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>

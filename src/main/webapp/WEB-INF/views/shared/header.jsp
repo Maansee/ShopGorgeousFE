@@ -72,7 +72,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 </head>
 <body>
-<a href="productlist"><img src="${img}/download.png" class="img-head" alt=""></a>
+<a href="<c:url value='/productlist'/>"><img src="${img}/download.png" class="img-head" alt=""></a>
 <div class="header">
 
 		<div class="container">
@@ -142,7 +142,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										<div class="col-sm-3">
 											<ul class="multi-column-dropdown">
 			
-												<li><a href="productlist"><i class="fa fa-angle-right" aria-hidden="true"></i>Show all Products</a></li>
+												<li><a href="<c:url value='/productlist'/>"><i class="fa fa-angle-right" aria-hidden="true"></i>Show all Products</a></li>
 										
 											</ul>
 										

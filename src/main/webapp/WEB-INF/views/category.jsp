@@ -17,7 +17,7 @@
 <div class="banner-top">
 	<div class="container">
 		<h3 >Category</h3>
-		<h4><a href="index">Home</a><label>/</label>Category</h4>
+		<h4><a href="<c:url value='/index'/>">Home</a><label>/</label>Category</h4>
 		<div class="clearfix"> </div>
 	</div>
 </div>

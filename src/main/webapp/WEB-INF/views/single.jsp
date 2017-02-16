@@ -16,7 +16,7 @@
 <html>
 <style>
 body{
-background: url("${img}/bg img1.jpg") no-repeat 0px 0px;
+background: url("${img}/profilebg.jpg") no-repeat 0px 0px;
 background-size: cover;
 font-family: 'Open Sans',sans-serif;
 background-attachment: fixed;
@@ -49,11 +49,10 @@ background-attachment: fixed;
 											class="img-responsive">
 									</div>
 									<script src="${js}/jquery.zoomtoo.js"></script>
-	
 
 								</div>
 							</div>
-							<div class="single-right simpleCart_shelfItem">
+							<div class="single-right">
 								<h4>${productObject.productname}</h4>
 								<h5>${productObject.category_name}</h5>
 								<div class="block">
@@ -61,12 +60,7 @@ background-attachment: fixed;
 								</div>
 								<p class="price item_price">Rs.
 									${productObject.productprice}</p>
-								<!-- 	<ul class="social-top">
-					<li><a href="#" class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a></li>
-					<li><a href="#" class="icon twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a></li>
-					<li><a href="#" class="icon pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i><span></span></a></li>
-					<li><a href="#" class="icon dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i><span></span></a></li>
-				</ul> -->
+								
 								<div class="quick_desc">
 									<p>
 										<span>Quick Overview : </span>
@@ -75,13 +69,6 @@ background-attachment: fixed;
 								</div>
 								<div class="color-quality">
 
-
-
-
-									<!-- 							</div> -->
-									<!-- 									<div class="ribben1"> -->
-									<!-- 										<p>SALE</p> -->
-									<!-- 									</div> -->
 
 									<security:authorize access="hasRole('ROLE_USER')">
 

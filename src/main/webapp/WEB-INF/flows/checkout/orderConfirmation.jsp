@@ -49,7 +49,7 @@ body {
 	display: inline-block;
 	padding: 10px;
 	margin: 10px;
-	background: #0AF;
+	background: purple;
 	/* Font styles */
 	color: white;
 	font-weight: bold;
