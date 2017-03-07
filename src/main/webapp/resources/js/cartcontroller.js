@@ -34,9 +34,9 @@ var myapp = angular
 
 					$scope.getCart = function(cartId) {
 						$scope.cartId = cartId;
-						// $scope.refreshCart(cartId);
+						 $scope.refreshCart(cartId);
 						$scope.refreshCart();
-					//	alert('Successfully refreshed the cart!');
+					alert('Successfully refreshed the cart!');
 					}
 
 					$scope.removeFromCart = function(cartitemid) {

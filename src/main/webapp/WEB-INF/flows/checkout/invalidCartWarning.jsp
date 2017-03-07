@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>ShopGorgeous Customer Info</title>
+<title>Empty Cart</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="${css}/bootstrap.min.css">
@@ -55,7 +55,7 @@
 	<div align="center">
 		<div class="metro">
 			<h1>
-				<font color="white">Status: Error!</font>
+				<font color="white">Your cart is empty!!!</font>
 			</h1>
 		</div>
 		

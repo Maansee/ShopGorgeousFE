@@ -30,32 +30,6 @@ public class HomeController {
 		return model;
 	}
 
-	/*@RequestMapping("/login")
-	public ModelAndView login() {
-		ModelAndView model = new ModelAndView("login");
-		return model;
-	}
-	
-	@RequestMapping("/loginerror")
-	public String LoginError(@RequestParam(value = "error", required = false) String error, Model model) {
-		model.addAttribute("error", "Typos are expected! Pls try again.");
-		return "login";
-	}
-
-	@RequestMapping(value = "/Logout", method = RequestMethod.GET)
-	public String logoutPage(HttpServletRequest request, HttpServletResponse response,
-			@RequestParam(value = "logout", required = false) String logout, Model model) {
-		System.out.println("Logout1");
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		if (auth != null) {
-			System.out.println("Logout2");
-			new SecurityContextLogoutHandler().logout(request, response, auth);
-		}System.out.println("Logout3");
-//		model.addAttribute("logout", "Have a great time! Thank you for visiting us.");
-		return "login";
-	}*/
-
-
 	
 	@RequestMapping("/about")
 	public ModelAndView about() {

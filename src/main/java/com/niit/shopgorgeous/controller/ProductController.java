@@ -53,9 +53,7 @@ public class ProductController {
 
 	{
 		System.out.println("add product");
-//
-//		if (result.hasErrors())
-//			return "productForm";
+
 
 		MultipartFile image = reg.getImage();
 		if (image != null && !image.isEmpty()) {
@@ -78,11 +76,6 @@ public class ProductController {
 
 	}
 	
-//	@RequestMapping(value = "/productlist")
-//	public String ViewProducts(Model model) {
-//		model.addAttribute("productList", this.productDAO.list());
-//		return "/productlist";
-//	}
 
 
 	@RequestMapping(value = "/productlist")
@@ -113,13 +106,7 @@ public class ProductController {
 	public @ResponseBody List<Product> listProdInJSON() {
 		return productDAO.list();
 	}
-//
-//	 @RequestMapping("/infoprod/{productid}")
-//	 public ModelAndView trial() {
-//	 ModelAndView model = new ModelAndView("singleProduct");
-//	 return model;
-//	 }
-//
+
 	@RequestMapping("/infoprod/{productid}")
 	public ModelAndView getRecord(@PathVariable("productid") int id, Model model) {
 		Product productObject = productDAO.get(id);

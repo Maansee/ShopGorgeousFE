@@ -79,12 +79,14 @@
 		</div>
 	</div>
 
-	<div class="content">
-		<!--login-->
-		<div class="login">
-			<div class="main-agileits">
-				<div class="form-w3agileabc form1">
+	<div id="all">
 
+        <div id="content">
+            <div class="container">
+		
+			<div class="col-md-6">
+					<div class="box">
+				
 					<form:form commandName="order" class="form-horizontal">
 
 						<h3>Customer Shipping Address:</h3>
@@ -150,7 +152,95 @@
 								<div class="clearfix"></div>
 							</div>
 							<input type="hidden" name="_flowExecutionKey" />
+							
+							
+							</div>
+							</form:form>
+							
+							</div>
+							</div>
+							
+							
+							
+		
+		
+			
+			<div class="col-md-6">
+			
+			<div class="box">
+							<form:form commandName="order" class="form-horizontal">
+							
+							
+							 
+							<h3>Customer Billing Address:</h3>
+							<!-- 
+							<div class="main-agileits"> -->
 
+							<form:label path="cart.usercustomer.billingAddress.flatno">Flat No</form:label>
+							<div class="key">
+								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+								<form:input path="cart.usercustomer.billingAddress.flatno" />
+								<div class="clearfix"></div>
+							</div>
+
+							<form:label path="cart.usercustomer.billingAddress.buildingname">Building Name</form:label>
+							<div class="key">
+								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+								<form:input path="cart.usercustomer.billingAddress.buildingname" />
+								<div class="clearfix"></div>
+							</div>
+
+							<form:label path="cart.usercustomer.billingAddress.localityname">Locality Name</form:label>
+							<div class="key">
+								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+								<form:input path="cart.usercustomer.billingAddress.localityname" />
+								<div class="clearfix"></div>
+							</div>
+
+							<form:label path="cart.usercustomer.billingAddress.landmark">Landmark</form:label>
+							<div class="key">
+								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+								<form:input path="cart.usercustomer.billingAddress.landmark" />
+								<div class="clearfix"></div>
+							</div>
+
+							<form:label path="cart.usercustomer.billingAddress.cityname">City</form:label>
+							<div class="key">
+								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+								<form:input path="cart.usercustomer.billingAddress.cityname" />
+								<div class="clearfix"></div>
+							</div>
+
+							<form:label path="cart.usercustomer.billingAddress.statename">State</form:label>
+							<div class="key">
+								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+								<form:input path="cart.usercustomer.billingAddress.statename" />
+								<div class="clearfix"></div>
+							</div>
+
+							<form:label path="cart.usercustomer.billingAddress.countryname">Country</form:label>
+							<div class="key">
+								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+								<form:input path="cart.usercustomer.billingAddress.countryname" />
+								<div class="clearfix"></div>
+							</div>
+
+							<form:label path="cart.usercustomer.billingAddress.zipcode">Zip Code</form:label>
+							<div class="key">
+								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+								<form:input path="cart.usercustomer.billingAddress.zipcode" />
+								<div class="clearfix"></div>
+							</div>
+
+							</div> 
+							
+							</div>
+							
+							</div>
+			</div>
+							
+						
+						<div class="container">
 
 							<div align="center">
 								<button class="btn btn-default"
@@ -169,11 +259,14 @@
 								name="_eventId_shippingDetailCollected" />
 						</div>
 					</form:form>
-				</div>
-			</div>
+					
+					</div>
+				
+				
 		</div>
-	</div>
+	<!-- </div> -->
 </body>
+<br>
 
 <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> 
 <script src="${js}/bootstrap.js"></script> 

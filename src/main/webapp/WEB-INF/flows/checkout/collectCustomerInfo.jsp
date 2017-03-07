@@ -115,7 +115,7 @@
 								<div class="clearfix"></div>
 							</div>
 
-							<h3>Customer Billing Address:</h3>
+							<%-- <h3>Customer Billing Address:</h3>
 
 							<form:label path="cart.usercustomer.billingAddress.flatno">Flat No</form:label>
 							<div class="key">
@@ -171,7 +171,7 @@
 								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
 								<form:input path="cart.usercustomer.billingAddress.zipcode" />
 								<div class="clearfix"></div>
-							</div>
+ --%>							</div>
 
 							<input type="hidden" name="_flowExecutionKey" />
 
